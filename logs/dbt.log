@@ -1,0 +1,56 @@
+[0m17:57:23.975127 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BBC8F4AD0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BBDA3FED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BBDA3FB10>]}
+
+
+============================== 17:57:23.980537 | a58af3bf-973e-44c0-86e1-3ef39ac1c484 ==============================
+[0m17:57:23.980537 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:57:23.981246 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'profiles_dir': 'C:\\Users\\VITTOR\\.dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt init', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m17:57:24.000549 [info ] [MainThread]: Creating dbt configuration folder at C:\Users\VITTOR\.dbt
+[0m17:59:20.964526 [debug] [MainThread]: Starter project path: C:\Users\VITTOR\Desktop\Ecommerce_antg\.venv\Lib\site-packages\dbt\include\starter_project
+[0m17:59:20.989056 [info ] [MainThread]: 
+Your new dbt project "ecommerce" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m17:59:20.989732 [info ] [MainThread]: Setting up your profile.
+[0m18:03:34.076560 [info ] [MainThread]: Profile ecommerce written to C:\Users\VITTOR\.dbt\profiles.yml using target's profile_template.yml and your supplied values. Run 'dbt debug' to validate the connection.
+[0m18:03:34.077724 [debug] [MainThread]: Command `dbt init` succeeded at 18:03:34.077570 after 370.25 seconds
+[0m18:03:34.078162 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BBEBE0D60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BBEAC1B50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000023BBD8B3F00>]}
+[0m18:03:34.078618 [debug] [MainThread]: Flushing usage events
+[0m18:03:34.981593 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:22:14.544119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4AC42B4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4AE6B7ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4AE6B7B10>]}
+
+
+============================== 04:22:14.549602 | eba4006f-7865-49e1-a799-194abfa010c8 ==============================
+[0m04:22:14.549602 [info ] [MainThread]: Running with dbt=1.11.7
+[0m04:22:14.550251 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'no_print': 'None', 'version_check': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\VITTOR\\.dbt', 'invocation_command': 'dbt init', 'use_colors': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m04:23:12.678585 [info ] [MainThread]: A project called ecommerce already exists here.
+[0m04:23:12.679872 [debug] [MainThread]: Command `dbt init` succeeded at 04:23:12.679718 after 58.26 seconds
+[0m04:23:12.680275 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4AE7B8050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4AE79B0B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001A4AD5518C0>]}
+[0m04:23:12.680679 [debug] [MainThread]: Flushing usage events
+[0m04:23:13.279136 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m04:27:08.605207 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D6A250B4D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D6A4797ED0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D6A4797B10>]}
+
+
+============================== 04:27:08.609782 | d61b9cce-aa64-4df2-8b2e-c2f732c2ca7c ==============================
+[0m04:27:08.609782 [info ] [MainThread]: Running with dbt=1.11.7
+[0m04:27:08.610439 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'debug': 'False', 'log_format': 'default', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'profiles_dir': 'C:\\Users\\VITTOR\\.dbt', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt run', 'use_experimental_parser': 'False', 'log_path': 'logs'}
+[0m04:27:08.610946 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path C:\Users\VITTOR\Desktop\Ecommerce_antg\dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m04:27:08.611929 [debug] [MainThread]: Command `dbt run` failed at 04:27:08.611800 after 0.12 seconds
+[0m04:27:08.612322 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D6A36AEEA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D6A36A2C30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002D6A3631F20>]}
+[0m04:27:08.612702 [debug] [MainThread]: Flushing usage events
+[0m04:27:09.209053 [debug] [MainThread]: An error was encountered while trying to flush usage events
