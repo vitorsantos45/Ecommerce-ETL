@@ -23,7 +23,7 @@ A arquitetura segue o padrão de **Medallion Architecture**:
 ## 🛠️ Tecnologias Utilizadas
 
 * 🐍 Python
-* ☁️ AWS S3
+* ☁️  S3
 * 📦 boto3
 * 🧪 Parquet
 * 🧠 Google Colab / Notebooks
@@ -40,7 +40,7 @@ A arquitetura segue o padrão de **Medallion Architecture**:
 ### 1. Ingestão (Bronze)
 
 * Leitura de arquivos CSV
-* Upload para AWS S3 via boto3
+* Upload para SUpabase via boto3
 * Armazenamento de dados brutos
 
 ---
@@ -67,44 +67,6 @@ A arquitetura segue o padrão de **Medallion Architecture**:
 
 * Integração com Supabase
 * Disponibilização dos dados para consumo
-
----
-
-## 📂 Estrutura do Projeto
-
-```id="y8h3qp"
-data-lake-project/
-│
-├── data/
-│   ├── bronze/
-│   ├── silver/
-│   └── gold/
-│
-├── notebooks/
-│   └── transformations.ipynb
-│
-├── src/
-│   ├── ingestion.py
-│   ├── transformation.py
-│   └── upload_s3.py
-│
-├── dbt/
-│   ├── models/
-│   │   ├── bronze/
-│   │   ├── silver/
-│   │   └── gold/
-│   ├── dbt_project.yml
-│   └── profiles.yml
-│
-├── docs/
-│   └── PRD.md
-│
-├── config/
-│   └── settings.py
-│
-├── requirements.txt
-└── README.md
-```
 
 ---
 
@@ -141,7 +103,7 @@ Esse documento foi essencial para garantir consistência e organização na mode
 
 ---
 
-## ☁️ Data Lake (AWS S3)
+## ☁️ Data Lake (S3)
 
 ```id="r3f8xm"
 s3://meu-data-lake/
@@ -169,38 +131,6 @@ Os dados da camada Gold são persistidos no Supabase para consumo por aplicaçõ
 
 ---
 
-## ▶️ Como Executar
-
-1. Clone o repositório:
-
-```bash id="6zj2nk"
-git clone https://github.com/seu-usuario/data-lake-project.git
-```
-
-2. Instale dependências:
-
-```bash id="8g4mvo"
-pip install -r requirements.txt
-```
-
-3. Configure credenciais AWS e Supabase
-
-4. Execute:
-
-```bash id="o2n4rx"
-python src/ingestion.py
-python src/transformation.py
-```
-
-5. Execute DBT:
-
-```bash id="v0s9qf"
-dbt run
-dbt test
-```
-
----
-
 ## 📈 Resultados
 
 * Pipeline de dados completo (ETL)
@@ -210,18 +140,8 @@ dbt test
 * Dados otimizados com Parquet
 * Integração com cloud e banco moderno
 
----
 
-## 🚀 Próximos Passos
-
-* Orquestração com Airflow
-* CI/CD para DBT
-* Monitoramento de pipelines
-* Dashboard com BI
-
----
-
-## 👨‍💻 Autor
+## 👨‍💻 Vitor Santos
 
 Projeto desenvolvido para portfólio em Engenharia de Dados.
 
