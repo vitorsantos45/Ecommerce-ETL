@@ -1,4 +1,4 @@
-# 🚀 Data Lake & ETL Pipeline com Python, AWS S3, DBT e Supabase
+# 🚀 Data Lake & ETL Pipeline com Python, S3, DBT e Supabase
 
 ## 📌 Visão Geral
 
@@ -10,13 +10,48 @@ Além disso, foi utilizado um documento PRD (Product Requirements Document) para
 
 ---
 
-## 🏗️ Arquitetura
+## 📂 Estrutura dos Dados
 
-A arquitetura segue o padrão de **Medallion Architecture**:
+O Data Lake contém arquivos no formato Parquet representando tabelas de um sistema de e-commerce:
 
-* 🟤 **Bronze** → Dados brutos (CSV, ingestão direta)
-* ⚪ **Silver** → Dados limpos, tratados e padronizados (Parquet)
-* 🟡 **Gold** → Dados analíticos modelados com DBT
+* `clientes.parquet`
+* `produtos.parquet`
+* `vendas.parquet`
+* `preco_competidores.parquet`
+
+
+## 🎯 Objetivo
+
+Construir uma pipeline end-to-end que:
+
+* Ingere dados brutos (CSV)
+* Converte e armazena em formato otimizado (Parquet)
+* Organiza dados em camadas (Bronze, Silver e Gold)
+* Aplica transformações com DBT
+* Disponibiliza dados prontos para análise
+
+
+## 🏗️ Arquitetura (Medallion)
+
+A arquitetura segue o padrão moderno de Data Engineering:
+
+### 🟤 Bronze (Raw)
+
+* Dados brutos em CSV
+* Armazenados no Data Lake (S3)
+* Sem tratamento
+
+### ⚪ Silver (Trusted)
+
+* Conversão CSV → Parquet
+* Limpeza e padronização
+* Tipagem de dados
+
+### 🟡 Gold (Business)
+
+* Modelagem com DBT
+* Regras de negócio aplicadas
+* Tabelas analíticas
 
 ---
 
@@ -37,36 +72,30 @@ A arquitetura segue o padrão de **Medallion Architecture**:
 
 ## 🔄 Pipeline de Dados
 
-### 1. Ingestão (Bronze)
+### 1. Ingestão
 
 * Leitura de arquivos CSV
-* Upload para SUpabase via boto3
-* Armazenamento de dados brutos
-
----
+* Upload para S3 via boto3
+* Armazenamento na camada Bronze
 
 ### 2. Transformação (Silver)
 
-* Conversão de CSV → Parquet
-* Limpeza e tratamento de dados
-* Padronização de schemas
-* Escrita no Data Lake (S3)
-
----
+* Conversão para Parquet
+* Limpeza e padronização
+* Organização no Data Lake
 
 ### 3. Modelagem (Gold com DBT)
 
-* Criação de modelos analíticos
-* Aplicação de regras de negócio
-* Construção de tabelas finais
-* Versionamento e rastreabilidade com DBT
-
----
+* Criação de modelos SQL
+* Versionamento de transformações
+* Testes de qualidade
+* Organização por camadas
 
 ### 4. Persistência
 
-* Integração com Supabase
-* Disponibilização dos dados para consumo
+* Carga no PostgreSQL (Supabase)
+* Dados prontos para consumo analítico
+
 
 ---
 
@@ -100,17 +129,6 @@ O arquivo `PRD.md` foi utilizado como base estratégica para o projeto, contendo
 * Casos de uso analíticos
 
 Esse documento foi essencial para garantir consistência e organização na modelagem dos dados.
-
----
-
-## ☁️ Data Lake (S3)
-
-```id="r3f8xm"
-s3://meu-data-lake/
-    ├── bronze/
-    ├── silver/
-    └── gold/
-```
 
 ---
 
